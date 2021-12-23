@@ -25,7 +25,7 @@ def run():
         "--fps",
         dest="fps",
         nargs=1,
-        default=0.5,
+        default=30.0,
         type=float,
         help="The frames per second to use.",
     )
@@ -34,7 +34,7 @@ def run():
 
     path_in = abspath(args.path)
     print(f"Reading frames from directory: {path_in}")
-    path_out = abspath(args.outpath) + "/video.avi"
+    path_out = abspath(args.outpath) + "/video.mp4"
     print(f"Saving video to: {path_out}")
 
     fps = args.fps
@@ -56,7 +56,7 @@ def run():
         # inserting the frames into an image array
         frame_array.append(img)
 
-    out = cv2.VideoWriter(path_out, cv2.VideoWriter_fourcc(*"DIVX"), fps, size)
+    out = cv2.VideoWriter(path_out, cv2.VideoWriter_fourcc(*"MP4V"), fps, size)
 
     for i in range(len(frame_array)):
         # writing to a image array
