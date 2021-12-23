@@ -10,7 +10,6 @@ setup(
             "frames-to-video = frames_to_video.main:run",
         ],
     },
-    install_requires=["cryptography==35.0.0",
-                      "passlib==1.7.4", "pycryptodome==3.11.0"],
+    install_requires=["opencv-python"],
     python_requires=">=3.6",
 )

@@ -1,6 +1,6 @@
 # frames-to-video
 
-Command line utility for converting a folder of frames to a video.
+Command line utility for converting a directory of frames to a video.
 
 ## installation
 
