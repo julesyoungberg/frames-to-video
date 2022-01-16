@@ -50,9 +50,6 @@ def run():
         filename = path_in + "/" + files[i]
         # reading each files
         img = cv2.imread(filename)
-        if img == None:
-            break
-
         height, width, _ = img.shape
         size = (width, height)
 
