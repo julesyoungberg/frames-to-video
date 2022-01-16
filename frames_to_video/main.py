@@ -50,14 +50,14 @@ def run():
         filename = path_in + "/" + files[i]
         # reading each files
         img = cv2.imread(filename)
-        if img == None:
+        try:
+            height, width, _ = img.shape
+            size = (width, height)
+
+            # inserting the frames into an image array
+            frame_array.append(img)
+        except:
             break
-
-        height, width, _ = img.shape
-        size = (width, height)
-
-        # inserting the frames into an image array
-        frame_array.append(img)
 
     out = cv2.VideoWriter(path_out, cv2.VideoWriter_fourcc(*"MP4V"), fps, size)
 
