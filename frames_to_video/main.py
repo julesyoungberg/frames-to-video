@@ -41,7 +41,7 @@ def run():
     print(f"Using FPS: {fps}")
 
     frame_array = []
-    files = [f for f in os.listdir(path_in) if isfile(join(path_in, f))]
+    files = [f for f in os.listdir(path_in) if isfile(join(path_in, f)) and f[0] != "."]
 
     # for sorting the file names properly
     files.sort(key=lambda x: int(x[:-4]))
